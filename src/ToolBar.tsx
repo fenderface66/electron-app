@@ -1,12 +1,15 @@
 import * as React from 'react';
-import { SFC } from 'react';
+import {useEffect, useState} from "react";
 
 type Props = {};
 
-const ToolBar: SFC<Props> = () => {
-  console.log(history);
+const ToolBar: React.FunctionComponent<Props> = () => {
+  const [testState, setTestState] = useState<number>(2);
+  useEffect(() => {
+    setTestState(4);
+  }, [])
   return (
-      <p>Hello</p>
+      <p>{testState}</p>
   );
 };
 
