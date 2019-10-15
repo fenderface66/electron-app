@@ -13,12 +13,18 @@
     "noUnusedParameters": true,
     "importHelpers": true,
     "noEmitHelpers": true,
-    "module": "commonjs",
     "moduleResolution": "node",
     "pretty": true,
     "target": "es2015",
-    "jsx": "react"
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "module": "esnext",
+    "esModuleInterop": true
   },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "formatCodeOptions": {
     "indentSize": 2,
     "tabSize": 2

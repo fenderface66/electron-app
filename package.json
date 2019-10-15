@@ -11,11 +11,15 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "tslint --project tsconfig.json --type-check --force"
+    "lint": "tslint --project tsconfig.json --type-check --force",
+    "test": "jest --config jest.config.js"
   },
   "keywords": [],
   "author": "robbieheygate",
   "license": "MIT",
+  "jest": {
+    "setupTestFrameworkScriptFile": "./setupTests.js"
+  },
   "config": {
     "forge": {
       "make_targets": {
@@ -53,7 +57,10 @@
         "renderer": {
           "sourceDirectory": "src/renderer"
         },
-        "whiteListedModules": ["react", "react-dom"]
+        "whiteListedModules": [
+          "react",
+          "react-dom"
+        ]
       }
     }
   },
@@ -69,6 +76,10 @@
     "tslib": "^1.4.0"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.6.3",
+    "@types/enzyme": "^3.10.3",
+    "@types/jest": "^24.0.19",
+    "babel-jest": "^24.9.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
@@ -77,6 +88,10 @@
     "electron-prebuilt-compile": "4.0.0",
     "electron-webpack": "^2.7.4",
     "electron-webpack-ts": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
     "tslint": "^5.1.0",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2"

@@ -10,6 +10,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 let mainWindow: Electron.BrowserWindow | null;
 
 function createMainWindow() {
+
   const window = new BrowserWindow({webPreferences: {nodeIntegration: true}})
 
   if (isDevelopment) {
