@@ -22,5 +22,6 @@
   "formatCodeOptions": {
     "indentSize": 2,
     "tabSize": 2
-  }
+  },
+  "extends": "./node_modules/electron-webpack/tsconfig-base.json"
 }

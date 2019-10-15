@@ -3,9 +3,11 @@
   "productName": "electron-forge-react-typescript",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/index.ts",
+  "main": "src/main/index.ts",
   "scripts": {
     "start": "electron-forge start",
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
@@ -43,6 +45,15 @@
       "windowsStoreConfig": {
         "packageName": "",
         "name": "electronforgereacttypescript"
+      },
+      "electronWebpack": {
+        "main": {
+          "sourceDirectory": "src/main"
+        },
+        "renderer": {
+          "sourceDirectory": "src/renderer"
+        },
+        "whiteListedModules": ["react", "react-dom"]
       }
     }
   },
@@ -61,9 +72,13 @@
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "electron": "^6.0.12",
     "electron-forge": "^5.2.4",
     "electron-prebuilt-compile": "4.0.0",
+    "electron-webpack": "^2.7.4",
+    "electron-webpack-ts": "^3.2.0",
     "tslint": "^5.1.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2"
   }
 }

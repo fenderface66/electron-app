@@ -10,3 +10,5 @@ export class App extends React.Component<undefined, undefined> {
     );
   }
 }
+
+export default App;
