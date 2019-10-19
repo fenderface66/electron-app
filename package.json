@@ -20,6 +20,9 @@
   "jest": {
     "setupTestFrameworkScriptFile": "./setupTests.js"
   },
+  "build": {
+    "appId": "org.fenderface66.makemyday"
+  },
   "config": {
     "forge": {
       "make_targets": {
@@ -73,6 +76,7 @@
     "electron-squirrel-startup": "^1.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.8.6",
+    "react-google-login": "^5.0.5",
     "tslib": "^1.4.0"
   },
   "devDependencies": {
